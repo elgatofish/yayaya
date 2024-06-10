@@ -9,11 +9,14 @@
 html, body {
   background: var(--color-bg);
   color: var(--color-fg);
-  font-family: "Inconsolata", monospace;
+  font-family: 'jetbrains-mono', monospace;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+
+  overflow: hidden;
+  scrollbar-width: none;
 }
 
 .container {
@@ -34,11 +37,12 @@ html, body {
 
 .right {
   grid-area: right;
-  height: 350px ;
+  height: 40%;
   width: 100%;
   background-color: #1A1C1D;
   padding-bottom: 30px;
   padding-left: 15px;
+  border-radius: 15px 0px 15px 0px;
 }
 
 .image img {
@@ -78,11 +82,12 @@ html, body {
 }
 
 .search-form {
-  width: 20rem;
+  width: 25rem;
   outline: none;
   border: none;
   background-color: #1a1c1d;
   color: #c9c9c9;
+  font-family: 'jetbrains-mono', monospace;
   font-size: 14px;
   padding-top: 10px;
 }
@@ -104,7 +109,7 @@ html, body {
 }
 
 li {
-  font-size:12px;
+  font-size:14px;
   list-style-type: none;
   padding: 5px;
 }
@@ -120,4 +125,28 @@ a:visited {
 
 a:hover {
   color: var(--color-link-hover);
+}
+
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.author {
+  text-align: right;
+  margin: 10px;
+  padding: 5px;
+
+  position: relative;
+  top: -50px;
 }
